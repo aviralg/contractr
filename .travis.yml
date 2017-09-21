@@ -8,6 +8,3 @@ before_install:
 - cd r; ./configure; make; cd ..
 - git clone https://github.com/aviralg/annotatr.git annotatr
 - r/bin/R CMD INSTALL annotatr
-
-install:
-- git clone https://github.com/aviralg/contractr.git contractr
