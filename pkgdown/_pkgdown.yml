@@ -1,0 +1,5 @@
+title: contractR
+
+template:
+  params:
+    bootswatch: paper

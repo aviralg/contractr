@@ -1,3 +1,5 @@
+library(annotatr)
+
 namespace <- function() "contractr"
 
 argument_type_handler <- create_handler("argument-type",
