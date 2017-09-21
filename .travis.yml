@@ -7,6 +7,7 @@ install:
 - R CMD INSTALL annotatr
 - R -e 'install.packages("testthat", repos="http://cran.us.r-project.org")'
 - git clone https://github.com/aviralg/contractr.git contractr
+- R CMD INSTALL contractr
 
 script:
 - R CMD check contractr
