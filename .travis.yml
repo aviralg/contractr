@@ -1,13 +1,14 @@
 language: r
 
 install:
-- git clone https://github.com/aviralg/r-3.4.0.git r
-- cd r; ./configure; make; cd ..
-- r/bin/R -e 'install.packages("testthat", repos="http://cran.us.r-project.org")'
+- git clone https://github.com/aviralg/rant.git rant
+- cd rant; ./configure; make -j; cd ..
+- rant/bin/R -e 'install.packages("testthat", repos="http://cran.us.r-project.org")'
+- rant/bin/R -e 'install.packages("devtools", repos="http://cran.us.r-project.org")'
+- rant/bin/R -e 'install.packages("roxygen2", repos="http://cran.us.r-project.org")'
 - git clone https://github.com/aviralg/annotatr.git annotatr
-- r/bin/R CMD INSTALL annotatr
+- rant/bin/R CMD INSTALL annotatr
 - git clone https://github.com/aviralg/contractr.git contractr
-- r/bin/R CMD build contractr
 
 script:
-- r/bin/R CMD check contractr
+- cd contractr; ../rant/bin/R -e "devtools::test()"
