@@ -1,0 +1,13 @@
+
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+
+language: r
+
+before_install:
+- git clone https://github.com/aviralg/r-3.4.0.git r
+- cd r; ./configure; make; cd ..
+- git clone https://github.com/aviralg/annotatr.git annotatr
+- r/bin/R CMD INSTALL annotatr
+
+install:
+- git clone https://github.com/aviralg/contractr.git contractr
