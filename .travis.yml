@@ -2,12 +2,12 @@ language: r
 
 install:
 - git clone https://github.com/aviralg/r-3.4.0.git r
-- cd r; ./configure; sudo make install ; cd ..
+- cd r; ./configure; make; cd ..
+- r/bin/R -e 'install.packages("testthat", repos="http://cran.us.r-project.org")'
 - git clone https://github.com/aviralg/annotatr.git annotatr
-- R CMD INSTALL annotatr
-- R -e 'install.packages("testthat", repos="http://cran.us.r-project.org")'
+- r/bin/R CMD INSTALL annotatr
 - git clone https://github.com/aviralg/contractr.git contractr
-- R CMD INSTALL contractr
+- r/bin/R CMD build contractr
 
 script:
-- R CMD check contractr
+- r/bin/R CMD check contractr
