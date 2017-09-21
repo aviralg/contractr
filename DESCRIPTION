@@ -1,7 +1,8 @@
 Package: contractr
 Title: Inserts contracts for function arguments and return values.
 Version: 0.0.0.9000
-Authors@R: person("Aviral", "Goel", email = "goel.aviral@gmail.com", role = c("aut", "cre"))
+Author: Aviral Goel <goel.aviral@gmail.com>
+Maintainer: Aviral Goel <goel.aviral@gmail.com>
 Description: This package sets up annotation handlers which transform function body by adding contracts to typecheck function arguments and function return values.
 Depends: R (>= 3.2.3), annotatr
 License: What license is it under?
