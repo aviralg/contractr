@@ -1,6 +1,6 @@
 RANT=~/projects/rant/bin/R
 
-all: readme site preview
+all: clean readme site preview
 
 readme:
 	R -e 'rmarkdown::render("README.Rmd")'
@@ -10,5 +10,10 @@ site:
 
 preview:
 	google-chrome docs/index.html
+
+clean:
+	rm -f README.md
+	$(RANT) -e 'pkgdown::clean_site(pkg = ".", path = "docs")'
+
 
 

@@ -1,6 +1,7 @@
 Package: contractr
 Title: Inserts contracts for function arguments and return values.
-Version: 0.0.0.9000
+URL: http://aviral.io/contractr
+Version: 0.1
 Authors@R: person("Aviral", "Goel", email = "goel.aviral@gmail.com",
                   role = c("aut", "cre"))
 Author: Aviral Goel <goel.aviral@gmail.com>
